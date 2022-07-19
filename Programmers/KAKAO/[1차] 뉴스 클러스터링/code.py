@@ -12,11 +12,7 @@ def solution(str1, str2):
         for i in range(len(string)-1):
             c_point = False
             key = string[i:i+2].upper()
-            for ch in key:
-                if ord(ch)<65 or ord(ch)>90:
-                    c_point = True
-                    break
-            if c_point == True:
+            if list(filter(lambda x :ord(x)<65 or ord(x)>90, key)):
                 continue
             str_dict[key] += 1
             key_set.add(key)
@@ -25,10 +21,10 @@ def solution(str1, str2):
     # dictionary 만들기
     dict1 = make_dict(str1)
     dict2 = make_dict(str2)
-  
+
     # 교집합
+		# 합집합
     intersection_set = 0
-    # 합집합
     sum_set = 0
     key_list = list(key_set)
     
