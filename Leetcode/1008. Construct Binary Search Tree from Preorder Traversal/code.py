@@ -10,7 +10,7 @@ class Solution:
         if len(preorder) == 0:
             return None
         
-        root = TreeNode()]
+        root = TreeNode()
         root.val = preorder[0]
         root.left = self.bstFromPreorder([i for i in preorder if i<root.val])
         root.right = self.bstFromPreorder([i for i in preorder if i>root.val])
