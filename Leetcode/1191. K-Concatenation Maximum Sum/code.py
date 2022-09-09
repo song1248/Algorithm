@@ -1,8 +1,8 @@
 class Solution:
     def kConcatenationMaxSum(self, arr: List[int], k: int) -> int:
         
-        def explore(arr):
-            
+        # arr에서 최대합 구하기
+        def explore(arr):           
             for i in range(1, len(arr)):
                 # 현재값이 양수일떄
                     # 이전값 + 현재값이 현재값보다 크면 현재값을 이전값 + 현재값 로 수정
